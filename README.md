@@ -1,6 +1,7 @@
 # crystal-widgets
 
 A set of system monitoring widgets for the Übersicht application.
+![Screenshot of crystal-widgets](https://github.com/locupleto/crystal-widgets/blob/main/Screenshot.png?raw=true)
 
 # Description
 

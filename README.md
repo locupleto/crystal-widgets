@@ -25,7 +25,40 @@ brew install wikit
 ```
 - Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed and move them into the Übersicht widget folder.
 
+```bash
+ubersicht
+├── crystal-analog-clock.widget
+│   └── index.coffee
+├── crystal-calendar.widget
+│   ├── index.coffee
+│   └── widget_runner.sh
+├── crystal-htop-cpu-bar.widget
+│   ├── index.coffee
+│   └── widget_runner.sh
+├── crystal-htop-load.widget
+│   ├── index.coffee
+│   └── widget_runner.sh
+├── crystal-htop-mem-bar.widget
+│   ├── index.coffee
+│   └── widget_runner.sh
+├── crystal-htop-swap-bar.widget
+│   ├── index.coffee
+│   └── widget_runner.sh
+├── crystal-system-profiler.widget
+│   ├── index.coffee
+│   ├── macOS_name.sh
+│   └── widget_script.sh
+├── crystal-top-cpu.widget
+│   └── index.coffee
+├── crystal-top-mem.widget
+│   └── index.coffee
+├── crystal_common.sh
+├── crystal_htop_arm64
+├── crystal_htop_runner.sh
+└── crystal_htop_x86
+```
+
 ## Customization
 
-Check out the crystal_common.sh file if you want to experiment with customizing the colors of the performance bars in the widgets.
+Check out the `crystal_common.sh` file if you want to experiment with customizing the colors of the performance bars in the widgets.
 

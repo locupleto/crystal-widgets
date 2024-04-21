@@ -19,5 +19,5 @@ To install the `crystal-widgets`, follow these steps:
 ```bash
 brew install flock
 brew install wikit
-
+```bash
 - Download the zip-file containing all widgets and the additional files needed to male them work into the Übersicht widget folder

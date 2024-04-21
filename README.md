@@ -20,4 +20,4 @@ To install the `crystal-widgets`, follow these steps:
 brew install flock
 brew install wikit
 ```
-- Download the zip-file containing all widgets and the additional files needed to male them work into the Übersicht widget folder
+- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed and move them into the Übersicht widget folder.

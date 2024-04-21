@@ -3,7 +3,7 @@
  Crystal-widgets is a set of system monitoring widgets for the Übersicht application suitable for both Apple Silicon and Intel-based Macs.
 ![Screenshot of crystal-widgets](https://github.com/locupleto/crystal-widgets/blob/main/Screenshot.png?raw=true)
 
-# Description
+## Description
 
 The `crystal-widgets` collection of widgets primarily focused on system performance monitoring, designed to enhance your desktop experience. These widgets provide real-time information on your system's performance, including CPU usage, memory consumption, and a basic system profile. The design is minimalist with a glass-like aesthetic, contributing both functionality and visual appeal to your desktop.
 

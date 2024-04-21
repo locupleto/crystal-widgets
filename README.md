@@ -14,3 +14,10 @@ To install the `crystal-widgets`, follow these steps:
 
 - Ensure that Übersicht is installed on your macOS system. If not, you can download it from [Übersicht's official website](http://tracesof.net/uebersicht/).
 - Ensure that Homebrew is installed on your system for managing software packages. If it's not installed, follow the instructions at [Homebrew's official website](https://brew.sh/).
+- Before installing `crystal-widgets`, ensure you have the necessary tools installed. Run the following commands in your terminal:
+
+```bash
+brew install flock
+brew install wikit
+
+- Download the zip-file containing all widgets and the additional files needed to male them work into the Übersicht widget folder

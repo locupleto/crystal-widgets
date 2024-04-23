@@ -92,5 +92,5 @@ The only thing left to do now is to move all files in the folder to Übersichts 
 
 ## Customization
 
-Check out the `crystal_common.sh` file if you want to experiment with customizing the colors of the performance bars in the widgets. Also if you don't like any of the widgets just remove them. Just make sure to keep the three files `crystal_common.sh`, `crystal_common.sh` and `crystal_htop_x86` or `crystal_htop_arm64` depending on the CPU-architecture pf your Mac.
+Check out the `crystal_common.sh` file if you want to experiment with customizing the colors of the performance bars in the widgets. Also if you don't like any of the widgets just remove them. Just make sure to keep the three files `crystal_common.sh`, `crystal_htop_runner.sh` and `crystal_htop_x86` or `crystal_htop_arm64` depending on the CPU-architecture pf your Mac.
 

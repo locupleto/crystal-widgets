@@ -74,8 +74,8 @@ Before you can run the Übersicht application with the crystal widgets you need 
 - Then append the full path to `flock` and `wikit` to the end of the `crystal_common.sh` file like this:
 
 ```bash
-echo "export FLOCK_CMD=\$(which flock)" >> crystal_common.sh
-echo "export WIKIT_CMD=\$(which wikit)" >> crystal_common.sh
+echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh
+echo "export WIKIT_CMD=$(which wikit)" >> crystal_common.sh
 ```
 
 ## Authorize executables

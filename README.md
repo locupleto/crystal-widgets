@@ -11,7 +11,7 @@ The core monitoring functionality leverages a custom build of the performance mo
 
 Please note that even if you have the original `htop` installed, you must use the custom-built binary `crystal-htop` included with these widgets for them to work. The only difference between htop and crystal-htop is that crystal-htop logs performance metrics in real-time to small text files in a temporary directory. These files are then read and displayed by the widgets. The `crystal_htop_runner.sh` script will ensure that only one single instance of `crystal-htop` will run, and it will operate in a headless mode using the screen command to remain hidden.
 
-## Installation
+## Installation preparations
 
 To install the `crystal-widgets`, follow these steps:
 
@@ -30,7 +30,7 @@ npm install -g wikit
 wikit --version
 ```
 
-- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed and move them into the Übersicht widget folder.
+- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:
 
 ```bash
 ubersicht
@@ -64,6 +64,31 @@ ubersicht
 ├── crystal_htop_runner.sh
 └── crystal_htop_x86
 ```
+
+## Configuration
+
+Before you can run the Übersicht application with the crystal widgets you need to configure the `crystal_common.sh` file by appending the full path of the two command tools you just installed. Depending on your system the installation paths of these may vary. 
+
+- Open the terminal, change directory so that you are in the same directory as the  `crystal_common.sh` file.
+
+- Then append the full path to `flock` and `wikit` to the end of the `crystal_common.sh` file like this:
+
+```bash
+echo "export FLOCK_CMD=\$(which flock)" >> crystal_common.sh
+echo "export WIKIT_CMD=\$(which wikit)" >> crystal_common.sh
+```
+
+## Authorize executables
+
+The final step necessary in order to run the scripts and two binaries in the widget set is to delete the com.apple.quarantine attribute of these files. Please make sure that you are in the widget directory when you issue the command. If you are uncertain of what you are doing, please read up on what this command does before you run it. One way to avoid doing this is to instead build the appropriate binary yourself. As previously stated, you can find the necessary resources for doing so here: [crystal-htop](https://github.com/locupleto/crystal-htop).
+
+Otherwise simply execute this one-liner:
+
+```bash
+find . -exec xattr {} \; | grep com.apple.quarantine$ && find . -exec sudo xattr -d com.apple.quarantine {} \;
+```
+
+The only thing left to do now is to move all files in the folder to Übersichts widget folder which you can see and change in the settings of the application.
 
 ## Customization
 

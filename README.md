@@ -21,13 +21,12 @@ To install the `crystal-widgets`, follow these steps:
 
 ```bash
 brew install flock
-brew install node
 ```
-- Then install wikit to get the system-profiler widget to work:
+- Then install node and use it to install wikit to get the system-profiler widget to work:
 
 ```bash
+brew install node
 npm install -g wikit
-wikit --version
 ```
 
 - Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:

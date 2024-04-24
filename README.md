@@ -35,6 +35,7 @@ npm install -g wikit
 ubersicht
 ├── crystal-analog-clock.widget
 │   └── index.coffee
+│   └── widget_runner.sh
 ├── crystal-calendar.widget
 │   ├── index.coffee
 │   └── widget_runner.sh
@@ -81,10 +82,11 @@ echo "export WIKIT_CMD=$(which wikit)" >> crystal_common.sh
 
 The final step necessary in order to run the scripts and two binaries in the widget set is to delete the com.apple.quarantine attribute of these files. Please make sure that you are in the widget directory when you issue the command. If you are uncertain of what you are doing, please read up on what this command does before you run it. One way to avoid doing this is to instead build the appropriate binary yourself. As previously stated, you can find the necessary resources for doing so here: [crystal-htop](https://github.com/locupleto/crystal-htop).
 
-Otherwise simply execute this one-liner:
+Otherwise simply execute these two one-liners:
 
 ```bash
-find . -exec xattr {} \; | grep com.apple.quarantine$ && find . -exec sudo xattr -d com.apple.quarantine {} \;
+sudo xattr -d com.apple.quarantine crystal_htop_arm64
+sudo xattr -d com.apple.quarantine crystal_htop_x86
 ```
 
 The only thing left to do now is to move all files in the folder to Übersichts widget folder which you can see and change in the settings of the application.

@@ -82,11 +82,26 @@ echo "export WIKIT_CMD=$(which wikit)" >> crystal_common.sh
 
 The final step necessary in order to run the scripts and two binaries in the widget set is to delete the com.apple.quarantine attribute of these files. Please make sure that you are in the widget directory when you issue the command. If you are uncertain of what you are doing, please read up on what this command does before you run it. One way to avoid doing this is to instead build the appropriate binary yourself. As previously stated, you can find the necessary resources for doing so here: [crystal-htop](https://github.com/locupleto/crystal-htop).
 
-Otherwise simply execute these two one-liners:
+Otherwise simply execute these two one-liners with your admin-password:
 
 ```bash
 sudo xattr -d com.apple.quarantine crystal_htop_arm64
 sudo xattr -d com.apple.quarantine crystal_htop_x86
+```
+
+You should now be able to test the binary from the terminal like this (on an Apple Silicon Mac):
+
+```bash
+./crystal_htop_arm64
+```
+
+which should show a display similar to this:
+![Screenshot of crystal_htop](https://github.com/locupleto/crystal-widgets/blob/main/Screenshot_htop.png?raw=true)
+
+And if with the crystal-htop binary running you should see a nnumber of small text-files with the performance measurements that this command logs continously and is subsequently used by the widgets.
+
+```bash
+ls -l /tmp
 ```
 
 The only thing left to do now is to move all files in the folder to the Übersichts widget folder which you can see and also change in the settings of the Übersicht application.

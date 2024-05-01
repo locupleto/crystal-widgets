@@ -18,16 +18,16 @@ To install the `crystal-widgets`, follow these steps:
 
 - Ensure that Übersicht is installed on your macOS system. If not, you can download it from [Übersicht's official website](http://tracesof.net/uebersicht/).
 - Ensure that Homebrew is installed on your system for managing software packages. If it's not installed, follow the instructions at [Homebrew's official website](https://brew.sh/).
-- Before installing `crystal-widgets`, ensure you have the necessary tools installed. Run the following commands in your terminal:
+- Before installing `crystal-widgets`, ensure you have the necessary tools installed. Run the following commands in your terminal to check for them and install them if they are missing:
 
 ```bash
-brew install flock
+command -v flock >/dev/null 2>&1 || brew install flock
 ```
 - Then install node and use it to install wikit to get the system-profiler widget to work:
 
 ```bash
-brew install node
-npm install -g wikit
+command -v node >/dev/null 2>&1 || brew install node
+command -v wikit >/dev/null 2>&1 || npm install -g wikit
 ```
 
 - Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/->widgets_folder.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:
@@ -68,11 +68,11 @@ npm install -g wikit
 
 ## Configuration
 
-Before you can run the Übersicht application with the crystal widgets you need to configure the `crystal_common.sh` file by appending the full path of the two command tools you just installed. Depending on your system the installation paths of these may vary. 
+Before you can run the Übersicht application with the crystal widgets you need to configure the `crystal_common.sh` file in the folder by appending the full path of the two command tools you just installed. Depending on your system the installation paths of these may vary. 
 
 - Open the terminal, change directory so that you are in the same directory as the  `crystal_common.sh` file.
 
-- Then append the full path to `flock` and `wikit` to the end of the `crystal_common.sh` file like this:
+- Then append the full path to `flock` and `wikit` commands as they are installed in your system to the end of the `crystal_common.sh` file like this:
 
 ```bash
 echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh
@@ -92,7 +92,9 @@ sudo xattr -d com.apple.quarantine crystal_htop_x86
 
 The only thing left to do now is to move all files in the folder to the Übersichts widget folder which you can see and also change in the settings of the Übersicht application.
 
-## Customization
+Start the Übersicht application and hopefully your widgets should appear on your desktop if you have followed all the instructions.
 
-Check out the `crystal_common.sh` file if you want to experiment with customizing the colors of the performance bars in the widgets. Also if you don't like any of the widgets just remove them. Just make sure to keep the three files `crystal_common.sh`, `crystal_htop_runner.sh` and `crystal_htop_x86` or `crystal_htop_arm64` depending on the CPU-architecture pf your Mac.
+## Optional customization
+
+If you like you can check out the `crystal_common.sh` file and experiment with customizing the colors of the performance bars in the widgets. Also if you don't like any of the widgets just remove them from the widgets folder. Just make sure to keep the three files `crystal_common.sh`, `crystal_htop_runner.sh` and `crystal_htop_x86` or `crystal_htop_arm64` depending on the CPU-architecture pf your Mac.
 

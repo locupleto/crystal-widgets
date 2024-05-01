@@ -104,7 +104,7 @@ And if with the crystal-htop binary running you should see a nnumber of small te
 ls -l /tmp
 ```
 
-The only thing left to do now is to move all files in the folder to the Übersichts widget folder which you can see and also change in the settings of the Übersicht application.
+Quit the crystal_htop command by pressing Q. The only thing left to do now is to move all files in the folder to the Übersichts widget folder which you can see and also change in the settings of the Übersicht application.
 
 Start the Übersicht application and hopefully your widgets should appear on your desktop if you have followed all the instructions.
 

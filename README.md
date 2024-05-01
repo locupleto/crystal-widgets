@@ -30,10 +30,10 @@ brew install node
 npm install -g wikit
 ```
 
-- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:
+- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/->widgets_folder.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:
 
 ```bash
-ubersicht
+->widgets_folder
 ├── crystal-analog-clock.widget
 │   └── index.coffee
 │   └── widget_runner.sh
@@ -90,7 +90,7 @@ sudo xattr -d com.apple.quarantine crystal_htop_arm64
 sudo xattr -d com.apple.quarantine crystal_htop_x86
 ```
 
-The only thing left to do now is to move all files in the folder to Übersichts widget folder which you can see and change in the settings of the application.
+The only thing left to do now is to move all files in the folder to the Übersichts widget folder which you can see and also change in the settings of the Übersicht application.
 
 ## Customization
 

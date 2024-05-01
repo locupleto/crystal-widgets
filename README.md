@@ -31,7 +31,9 @@ command -v node >/dev/null 2>&1 || brew install node
 command -v wikit >/dev/null 2>&1 || npm install -g wikit
 ```
 
-- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal-widgets.zip) containing all widgets and the helper files needed. Unzip the folder. This will unpack to a folder named put_into_widgets_folder. The contents of that folder should look like this:
+- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal.widget.zip) containing all the widgets and the helper files needed. 
+
+Unzip the folder. This will unpack to a folder named put_into_widgets_folder. The contents of that folder should look like this:
 
 ```bash
 .

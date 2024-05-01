@@ -96,7 +96,13 @@ You should now be able to test the binary from the terminal like this (on an App
 ./crystal_htop_arm64
 ```
 
-which should show a display similar to this:
+Or if you have an Intel Mac:
+
+```bash
+./crystal_htop_x86
+```
+
+which should show a display similar to this in your terminal window:
 ![Screenshot of crystal_htop](https://github.com/locupleto/crystal-widgets/blob/main/Screenshot_htop.png?raw=true)
 And if with the crystal-htop binary running you should see a nnumber of small text-files with the performance measurements that this command logs continously and is subsequently used by the widgets.
 
@@ -110,5 +116,7 @@ Start the Übersicht application and hopefully your widgets should appear on you
 
 ## Optional customization
 
-If you like you can check out the `crystal_common.sh` file and experiment with customizing the colors of the performance bars in the widgets. Also if you don't like any of the widgets just remove them from the widgets folder. Just make sure to keep the three files `crystal_common.sh`, `crystal_htop_runner.sh` and `crystal_htop_x86` or `crystal_htop_arm64` depending on the CPU-architecture pf your Mac.
+If you like you can check out the `crystal_common.sh` file and experiment with customizing the colors of the performance bars in the widgets. You can alter the start day of the week in the calendar widget here as well.
+ 
+ Also if you don't like any of the widgets just remove them from the widgets folder. Just make sure to keep the three files `crystal_common.sh`, `crystal_htop_runner.sh` and `crystal_htop_x86` or `crystal_htop_arm64` depending on the CPU-architecture pf your Mac.
 

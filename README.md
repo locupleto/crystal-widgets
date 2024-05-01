@@ -30,10 +30,10 @@ command -v node >/dev/null 2>&1 || brew install node
 command -v wikit >/dev/null 2>&1 || npm install -g wikit
 ```
 
-- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/->widgets_folder.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:
+- Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/put_into_widgets_folder.zip) containing all widgets and the helper files needed. Unzip the folder. The contents should look like this:
 
 ```bash
-->widgets_folder
+put_into_widgets_folder
 ├── crystal-analog-clock.widget
 │   └── index.coffee
 │   └── widget_runner.sh

@@ -76,7 +76,7 @@ Before you can run the Übersicht application with the crystal widgets you need 
  
 ```bash
 echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh
-echo "export FASTFETCH_CMD=$(which wikit)" >> crystal_common.sh
+echo "export FASTFETCH_CMD=$(which fastfetch)" >> crystal_common.sh
 ```
 
 ## Authorize executables

@@ -24,11 +24,10 @@ To install the `crystal-widgets`, follow these steps:
 ```bash
 command -v flock >/dev/null 2>&1 || brew install flock
 ```
-- Then install node and use it to install wikit to get the system-profiler widget to work:
+- Then install fastfetch to get the system-profiler widget to work:
 
 ```bash
-command -v node >/dev/null 2>&1 || brew install node
-command -v wikit >/dev/null 2>&1 || npm install -g wikit
+command -v fastfetch >/dev/null 2>&1 || brew install fastfetch
 ```
 
 - Download the [zip-file](https://github.com/locupleto/crystal-widgets/blob/main/crystal.widget.zip) containing all the widgets and the helper files needed. 
@@ -56,7 +55,6 @@ Unzip the folder. This will unpack to a folder named put_into_widgets_folder. Th
 │   └── widget_runner.sh
 ├── crystal-system-profiler.widget
 │   ├── index.coffee
-│   ├── macOS_name.sh
 │   └── widget_script.sh
 ├── crystal-top-cpu.widget
 │   └── index.coffee
@@ -78,7 +76,7 @@ Before you can run the Übersicht application with the crystal widgets you need 
 
 ```bash
 echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh
-echo "export WIKIT_CMD=$(which wikit)" >> crystal_common.sh
+echo "export FASTFETCH_CMD=$(which wikit)" >> crystal_common.sh
 ```
 
 ## Authorize executables

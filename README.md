@@ -1,6 +1,6 @@
 # Crystal-widgets
 
- Crystal-widgets is a set of system monitoring widgets for the Übersicht application suitable for both Apple Silicon and Intel-based Macs. Please note however that on some entry-level older Intel Macs these widgets may put a rather heavy load on the cpu. In those cases, it may be advisable to adjust the update times in some of the widgets.
+ Crystal-widgets is a set of system monitoring widgets for the Übersicht application suitable for both Apple Silicon and Intel-based Macs. Compatible with macOS Tahoe (26.x) and earlier. Please note however that on some entry-level older Intel Macs these widgets may put a rather heavy load on the cpu. In those cases, it may be advisable to adjust the update times in some of the widgets.
 The screenshot below is from a MacStudio M1 Ultra.
 
 ![Screenshot of crystal-widgets](https://github.com/locupleto/crystal-widgets/blob/main/Screenshot.png?raw=true)
@@ -72,7 +72,7 @@ Before you can run the Übersicht application with the crystal widgets you need 
 
 - Open the terminal, change directory so that you are in the same directory as the  `crystal_common.sh` file.
 
-- Then append the full path to `flock` and `wikit` commands as they are installed in your system to the end of the `crystal_common.sh` file like this:
+- Then append the full path to `flock` and `fastfetch` commands as they are installed in your system to the end of the `crystal_common.sh` file like this:
  
 ```bash
 echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh

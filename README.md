@@ -1,5 +1,8 @@
 # Crystal-widgets
 
+> **⚠️ Deprecated — use [crystal-widgets-v2](https://github.com/locupleto/crystal-widgets-v2) instead.**
+> This is the original v1 of the widget set. It is no longer actively developed. v2 has the same widgets and look but drops the `flock` and custom `htop` dependencies in favour of a small native sampler, and is considerably simpler to install. New users should start there.
+
  Crystal-widgets is a set of system monitoring widgets for the Übersicht application suitable for both Apple Silicon and Intel-based Macs. Compatible with macOS Tahoe (26.x) and earlier. Please note however that on some entry-level older Intel Macs these widgets may put a rather heavy load on the cpu. In those cases, it may be advisable to adjust the update times in some of the widgets.
 The screenshot below is from a MacStudio M1 Ultra.
 
@@ -68,16 +71,61 @@ Unzip the folder. This will unpack to a folder named put_into_widgets_folder. Th
 
 ## Configuration
 
-Before you can run the Übersicht application with the crystal widgets you need to configure the `crystal_common.sh` file in the folder by appending the full path of the two command tools you just installed. Depending on your system the installation paths of these may vary. 
+Before you can run the Übersicht application with the crystal widgets you need to tell `crystal_common.sh` where the two command-line tools you just installed live. The file already contains a section header for this at the very end:
 
-- Open the terminal, change directory so that you are in the same directory as the  `crystal_common.sh` file.
-
-- Then append the full path to `flock` and `fastfetch` commands as they are installed in your system to the end of the `crystal_common.sh` file like this:
- 
 ```bash
-echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh
-echo "export FASTFETCH_CMD=$(which fastfetch)" >> crystal_common.sh
+# ------ Paths to installation specific command-line tools ------------------
 ```
+
+Homebrew installs `flock` and `fastfetch` into a fixed location that depends only on your Mac's CPU architecture:
+
+| Mac | Homebrew prefix | `flock` | `fastfetch` |
+|---|---|---|---|
+| Apple Silicon (M1/M2/M3/M4) | `/opt/homebrew` | `/opt/homebrew/bin/flock` | `/opt/homebrew/bin/fastfetch` |
+| Intel | `/usr/local` | `/usr/local/bin/flock` | `/usr/local/bin/fastfetch` |
+
+- Open the Terminal and change directory into the unzipped `put_into_widgets_folder` (the folder containing `crystal_common.sh`).
+
+- Append the two paths for your Mac to the end of `crystal_common.sh`.
+
+  **Apple Silicon:**
+
+  ```bash
+  echo 'export FLOCK_CMD=/opt/homebrew/bin/flock' >> crystal_common.sh
+  echo 'export FASTFETCH_CMD=/opt/homebrew/bin/fastfetch' >> crystal_common.sh
+  ```
+
+  **Intel:**
+
+  ```bash
+  echo 'export FLOCK_CMD=/usr/local/bin/flock' >> crystal_common.sh
+  echo 'export FASTFETCH_CMD=/usr/local/bin/fastfetch' >> crystal_common.sh
+  ```
+
+  If you installed the tools somewhere else, or are unsure which prefix applies, you can let the shell look the paths up instead — but only if `flock` and `fastfetch` are on your `PATH`, otherwise the lines below write an empty value:
+
+  ```bash
+  echo "export FLOCK_CMD=$(which flock)" >> crystal_common.sh
+  echo "export FASTFETCH_CMD=$(which fastfetch)" >> crystal_common.sh
+  ```
+
+- Verify the result. The last two lines of the file must show absolute paths, and both files must exist:
+
+  ```bash
+  tail -n 2 crystal_common.sh
+  ls -l /opt/homebrew/bin/flock /opt/homebrew/bin/fastfetch   # or /usr/local/bin/... on Intel
+  ```
+
+  Expected output of the first command on an Apple Silicon Mac:
+
+  ```
+  export FLOCK_CMD=/opt/homebrew/bin/flock
+  export FASTFETCH_CMD=/opt/homebrew/bin/fastfetch
+  ```
+
+  If either line ends in `=` with nothing after it, open `crystal_common.sh` in a text editor and fill in the path by hand.
+
+Alternatively, skip the `echo` commands entirely and just open `crystal_common.sh` in any text editor and add the two `export` lines under the section header yourself.
 
 ## Authorize executables
 
